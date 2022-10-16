@@ -1,0 +1,66 @@
+
+
+.App {
+    text-align: center;
+  
+  }
+.container{
+    width: 100%;
+    height: 716px;
+     background-image: url("https://th.bing.com/th/id/R.004a23703fb5a3eb6b79bf80d41b0181?rik=lpoWdkD6aALiQg&riu=http%3a%2f%2fmiu.ac.ir%2fuploads%2fmou%2fimages%2fmou-register-bg.jpg&ehk=Am95AKZkYmbh62nZg91jvQdANPU%2byP%2fwIGqFx2K2al4%3d&risl=&pid=ImgRaw&r=0");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  
+  .container .register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  
+  
+  .link {
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .register input{
+    font-size: 15px;
+    text-align: center;
+    width: 350px;
+     height: 20px;
+    outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(30, 29, 29);
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  background-image: url("");
+  margin-bottom: 10px;
+  }
+  
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
+   
+  .register input:hover{
+    background-color: #b7bfce;
+  } 
+  
+  
+   .register button{
+    width: 80px;
+   background-color: rgb(78, 232, 17);
+   display: flex;
+   justify-content: center;
+   border-bottom-left-radius: 40%;
+   border-bottom-right-radius: 40%;
+   }
+  
+   .register button:hover{
+    background-color:rgb(232, 232, 76);
+   }

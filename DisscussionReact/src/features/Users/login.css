@@ -1,0 +1,56 @@
+
+.App-Login{
+
+    border: 3px solid black;
+    height: 715px;
+    /* margin-left: 505px; */
+    width: auto;
+    background-image: url("https://th.bing.com/th/id/R.e05fb2504ab4623062d0fb096d42ef1d?rik=r%2f60zJ2UnL2T1Q&pid=ImgRaw&r=0");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login_form{
+    border: 3px solid white;
+    height: 300px;
+    width: 500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;     */
+    margin-left: 550px;
+    margin-top: 200px;
+    flex-direction: column; 
+    background-color: aliceblue;
+    background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 1px 2px rgb(13,7,55);
+}
+
+.login_form input{
+    border: none;
+    border-bottom: 2px solid black;
+   border-spacing: 2px;
+   border-bottom-left-radius: 45%;
+   border-bottom-right-radius:45% ;
+   text-align: center;
+   width: 210px;
+   height: 30px;
+   margin-bottom: 10px;
+   padding: auto;
+}
+.login_form input:hover{
+    background-color: rgb(187, 191, 234);
+}
+
+.login_form button{
+    border-radius: 15%;
+    border: none;
+    background-color:grey ;
+}
+.login_form button:hover{
+    background-color: burlywood;
+}

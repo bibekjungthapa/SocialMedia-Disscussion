@@ -1,0 +1,85 @@
+.App-main {
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-attachment: fixed;
+    background-clip: border-box;
+}
+
+.Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 223, 216);
+
+}
+
+.outside-post {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(228, 216, 227);
+}
+
+.Post li {
+    list-style: none;
+    height: 300px;
+    width: 900px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 15px;
+    background-color: rgb(249, 245, 236);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+.Style-icon {
+    display: block;
+    margin-left: 700px;
+    margin-bottom: 55px;
+
+}
+
+/* .App-main{
+    background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700008792-768x480.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        animation: color 9s infinite linear;
+        text-align: center;
+        padding: 2em;
+    }
+    @keyframes color {
+        0%   { background: url("https://img.freepik.com/premium-photo/social-media-creativity-concepts-with-hashtag-sign-made-pencil_254791-896.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+        20%  { background: url("https://img.freepik.com/premium-photo/smart-digital-city-with-globalization-abstract-graphic-showing-connection-network_31965-37300.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+        40%  { background:url("https://img.freepik.com/premium-photo/dj-hosts-program-communicates-with-audience-air-radio-station-announcer-reads-news-male-radio-host-speaks-into-microphone-records-podcast_324489-5585.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+        60%  { background: url("https://img.freepik.com/free-photo/toy-bricks-table-with-word-network_144627-41193.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+        80%  { background: url("https://img.freepik.com/premium-photo/abstract-digital-globe-3d-rendering-scientific-technology-data-network_56345-421.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+        100% { background: url("https://img.freepik.com/free-photo/top-view-set-gadgets-purple-neon-light-blue_155003-19114.jpg?size=626&ext=jpg&ga=GA1.2.1098808485.1662483370"); }
+      } */
+
+
+button.post {
+    height: 35px;
+    width: 150px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+}
