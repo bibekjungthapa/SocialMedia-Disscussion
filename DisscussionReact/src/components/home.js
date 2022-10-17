@@ -8,20 +8,27 @@ import {
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 import Forum from "./forum";
+import Postpop from "./postpop";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 function Home() {
   const [addPostOn, setAddPostOn] = useState(false);
+  const [popup, setPopup] = useState(false);
   const [post, setpost] = useState(false);
   const [count, setCount] = useState(0);
   const addQuestion = () => {
     setAddPostOn(true);
   };
 
+  const postpop=()=>{
+    setPopup(true)
+    // console.log(popup)
+  }
+
   const [postOn, setPostOn] = useState([]);
   const fetchPost = () => {
     console.log("calling fetch");
-    fetch("http://localhost:3003/posts")
+    fetch("http://localhost:8080/posts")
       .then((response) => response.json())
       .then((data) => {
         console.log(data.post);
@@ -41,10 +48,32 @@ function Home() {
       }),
     };
     console.log(item);
-    fetch("http://localhost:3003/posts/" + item._id, requestOptions)
+    fetch("http://localhost:8080/posts/" + item._id, requestOptions)
       .then((response) => response.json())
       .then((res) => (res ? fetchPost() : ""));
   };
+
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
+
+  const updatePost = (item) => {
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        Question: question,
+        breifQuestion:answer
+      }),
+    };
+    console.log(item);
+    fetch("http://localhost:8080/posts/", requestOptions)
+      // .then((response) => response.json())
+      // .then((res) => (res ? fetchPost() : ""));
+  };
+
+
+
+
   const navigate = useNavigate();
   const redirectHome = () => {
     navigate("/home");
@@ -86,7 +115,18 @@ function Home() {
                           DeletePost(item);
                         }}
                       />
-                      <EditFilled />
+
+                      <EditFilled 
+                      onClick={() => {
+                        postpop();
+                      }}
+                    />
+                  
+                    {popup  ? <Postpop/> : null}
+                    
+
+
+
                     </div>
                     Q. <b> {item.Question}</b>,<br />
                     <i>{item.breifQuestion}</i>

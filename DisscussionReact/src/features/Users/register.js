@@ -6,7 +6,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [button, setButton] = useState("");
+  // const [button, setButton] = useState("");
 
   const callingFunc = () => {
     const requestOptions = {
@@ -18,7 +18,7 @@ function Register() {
         email: email,
       }),
     };
-    fetch("http://localhost:3003/register", requestOptions);
+    fetch("http://localhost:8080/register", requestOptions);
   };
 
   return (

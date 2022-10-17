@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import "./login.css";
 import { Formik, Form, Field } from "formik";
 import React from "react";
@@ -14,9 +13,9 @@ function Login() {
         email: values.email,
       }),
     };
-    fetch("http://localhost:3003/login", requestOptions);
+    fetch("http://localhost:8080/login", requestOptions);
   };
-
+ 
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -70,12 +69,20 @@ function Login() {
             )}
 
             <br></br>
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              onSubmit={() => {
+                <Link to="/home"></Link>
+              }}
+            >
+              Submit
+            </button>
           </Form>
         )}
       </Formik>
       <p>New here?</p>
-      <Link to="/register">Register</Link><br/>
+      <Link to="/register">Register</Link>
+      <br />
       <Link to="/sidebar">SideBar</Link>
     </div>
   );

@@ -11,7 +11,7 @@ const Forum = (props) => {
         breifQuestion: breif,
       }),
     };
-    fetch("http://localhost:3003/posts", requestOptions).then((res) =>
+    fetch("http://localhost:8080/posts", requestOptions).then((res) =>
       props.fetchPost()
     );
     setWhatsMind("");
