@@ -9,7 +9,7 @@ function Login() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: values.username,
+        name: values.password,
         email: values.email,
       }),
     };
@@ -26,7 +26,7 @@ function Login() {
     return error;
   }
 
-  function validateUsername(value) {
+  function validatePassword(value) {
     let error;
     if (value === "admin") {
       error = "Nice try!";
@@ -39,7 +39,7 @@ function Login() {
       <h1>Signup</h1>
       <Formik
         initialValues={{
-          username: "",
+          password: "",
           email: "",
         }}
         onSubmit={(values) => {
@@ -58,14 +58,14 @@ function Login() {
             />
             {errors.email && touched.email && <div>{errors.email}</div>}
             <br></br>
-            <label>Username:</label>
+            <label>password:</label>
             <Field
-              name="username"
-              validate={validateUsername}
-              placeholder="Enter Your UserName"
+              name="password"
+              validate={validatePassword}
+              placeholder="Enter Your Password"
             />
-            {errors.username && touched.username && (
-              <div>{errors.username}</div>
+            {errors.username && touched.password && (
+              <div>{errors.password}</div>
             )}
 
             <br></br>

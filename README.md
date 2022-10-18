@@ -1,13 +1,13 @@
-SOcial media
+SOCIAL MEDIA DISSCUSSION FORUM
 
 # Features
 <<<<<<< HEAD
--[*] Register
--[ ] Login
--[ ] App Post
--[ ] Delete Post
--[ ] Edit Post
--[ ] Like Post
+-[x] Register
+-[x] Login
+-[x] App Post
+-[x] Delete Post
+-[] Edit Post
+-[] Like Post
 =======
 
 - [x] Login
