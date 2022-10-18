@@ -2,11 +2,16 @@ SOCIAL MEDIA DISSCUSSION FORUM
 
 # Features
 
--[x] Register
-- [x] Login
--[x] Login
--[x] App Post
--[x] Delete Post
--[] Edit Post
--[] Like Post
+# Authentication
+- [x] Register
+- [] Login
 
+
+# CRUD OPERATION FOR POST
+- [X] Create Post
+- [x] App Post
+- [x] Delete Post
+- [] Edit Post
+
+# ADDITIONAL FEATURES  FOR POST
+- [] Like Post
