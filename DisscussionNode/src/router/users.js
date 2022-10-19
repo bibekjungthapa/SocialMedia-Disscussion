@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 const Users=require('../models/user');
-
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const router =express.Router()
@@ -29,28 +28,34 @@ router.post("/register", async (req, res) => {
     // res.json({ msg: "Hey good morning" });
   );
 
+
+
+
+
+
+
   
 router.post("/login", async (req, res) => {
-  const userExistArr =Users.find({ password: req.body.password });
-  console.log(userExistArr)
-try {
+ try {
 
-  bcrypt.compare(req.body.password, userExistArr.password, function(err, result) {
-    console.log(result)
+  const userExistArr =await Users.find({ email: req.body.email })
+  if(userExistArr.length>0){
+    console.log(userExistArr)
+    bcrypt.compare(req.body.password, userExistArr[0].password, function(err, result) {
+console.log(result)
+  });
 
-    // if (userExistArr.length > 0) {
-    //     res.json({
-    //       message: "USer USer found  found",
-    //     });
-    //   } else {
-    //     res.json({ message: "USerfound not found " });
-    //   }
+ }else{
+  res.json({
+    msg:"user not found"
+  })
+ }
+}  catch (error) {
+  
+ }
   
 });   
 
-} catch (error) {
-  
-}
 
 
 
@@ -64,15 +69,6 @@ try {
 
 
 
-  // console.log("hey hey")
-  //   const userExistArr = await Users.find({ email: req.body.email });
-  //   if (userExistArr.length > 0) {
-  //     res.json({
-  //       message: "USer USer found  found",
-  //     });
-  //   } else {
-  //     res.json({ message: "USerfound not found " });
-  //   }
-});
+
   
   module.exports=router;
