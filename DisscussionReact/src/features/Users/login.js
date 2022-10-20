@@ -81,7 +81,8 @@ function Login() {
         )}
       </Formik>
       <p>New here?</p>
-      <Link to="/register">Register</Link>
+      <Link to="/register">
+        <>Register</></Link>
       <br />
       <Link to="/sidebar">SideBar</Link>
     </div>

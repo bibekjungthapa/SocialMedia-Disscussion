@@ -8,14 +8,6 @@ const registerSlice = createSlice({
   name: "register",
   initialState,
   reducers: {
-//     reset: (state,actions) => {
-//      console.log("helloo")
-//      state.name=''
-//     },
-//     change: (state,actions) => {
-//         state.name=actions.payload.toString()
-//         // console.log(state)
-//   }
   }
 });
 

@@ -6,7 +6,6 @@ const bodyparser = require("body-parser");
 app.use(bodyparser.json());
 require('dotenv').config();
 require('./db/mongoose')();
-// const port = 3003
 const postrouter=require('./router/posts')
 const registerrouter=require('./router/users')
 app.use('/posts',postrouter)
