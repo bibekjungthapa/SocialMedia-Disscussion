@@ -53,23 +53,23 @@ function Home() {
       .then((res) => (res ? fetchPost() : ""));
   };
 
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
+  // const [question, setQuestion] = useState("");
+  // const [answer, setAnswer] = useState("");
 
-  const updatePost = (item) => {
-    const requestOptions = {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        Question: question,
-        breifQuestion:answer
-      }),
-    };
-    console.log(item);
-    fetch("http://localhost:8080/posts/", requestOptions)
-      // .then((response) => response.json())
-      // .then((res) => (res ? fetchPost() : ""));
-  };
+  // const updatePost = (item) => {
+  //   const requestOptions = {
+  //     method: "PUT",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       Question: question,
+  //       breifQuestion:answer
+  //     }),
+  //   };
+  //   console.log(item);
+  //   fetch("http://localhost:8080/posts/", requestOptions)
+  //     // .then((response) => response.json())
+  //     // .then((res) => (res ? fetchPost() : ""));
+  // };
 
 
 
