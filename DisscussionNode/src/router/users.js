@@ -35,17 +35,15 @@ router.post("/login", async (req, res) => {
               token: acessToken
             }
           })
+      
           .then(result => {
             res.json({
               msg: "found found",
               genToken: acessToken
             });
           })
-
-          // console.log(accessToken);
-
         }
-      );
+      )
     } else {
       res.json({
         msg: "user not found",

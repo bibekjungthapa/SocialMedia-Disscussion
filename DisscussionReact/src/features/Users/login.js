@@ -1,19 +1,32 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { Formik, Form, Field } from "formik";
 import React from "react";
 function Login() {
+
+  // const navigate = useNavigate();
   const finalFunc = (values) => {
     const requestOptions = {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json","token":"" },
       body: JSON.stringify({
         password: values.password,
         email: values.email,
       }),
     };
-    fetch("http://localhost:8080/login", requestOptions);
+    fetch("http://localhost:8080/login", requestOptions)
+      // .then((res) => res.json())
+      // .then(result => {
+        // if(result ==gentoken){
+        //   // const navigate = useNavigate();
+        //   localStorage.setItem("token",gentoken)
+        //   navigate('/home')
+        // }
+      // })
+
+
+
   };
  
   function validateEmail(value) {
