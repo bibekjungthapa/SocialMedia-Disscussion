@@ -104,6 +104,8 @@ function Home() {
       </div>
       {/* <hr /> */}
       <div className="outside-post">
+
+
         <div className="Post">
           {postOn.length > 0
             ? postOn.map((item, index) => {

@@ -11,6 +11,7 @@ const Forum = (props) => {
         breifQuestion: breif,
       }),
     };
+
     fetch("http://localhost:8080/posts", requestOptions).then((res) =>
       props.fetchPost()
     );
@@ -20,6 +21,23 @@ const Forum = (props) => {
 
   const [whatMind, setWhatsMind] = useState("");
   const [breif, setBreif] = useState("");
+
+
+const handelfile=event=>{
+
+const formData=new FormData();
+formData.append("avatar",event.target.files[0] )
+
+fetch("http://localhost:8080/posts",{
+method:'POST',
+body:formData,
+dataType:'jsonp'
+})
+
+  // console.log(URL.createObjectURL(event.target.files[0]))
+}
+
+
   return (
     <div className="App">
       <div className="post-Forum">
@@ -41,8 +59,12 @@ const Forum = (props) => {
           <FileImageOutlined />
           <hr></hr>
 
+          <input placeholder="type sth" type="file" name="avatar" onChange={handelfile}>
+</input>
+   <hr></hr>
           <button onClick={() => submitFunc()}>Post</button>
         </div>
+
       </div>
     </div>
   );
