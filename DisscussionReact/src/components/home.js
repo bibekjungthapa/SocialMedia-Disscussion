@@ -11,6 +11,7 @@ import Forum from "./forum";
 import Postpop from "./postpop";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
+//  import images from './images.jpg'
 function Home() {
   const [addPostOn, setAddPostOn] = useState(false);
   const [popup, setPopup] = useState(false);
@@ -71,6 +72,7 @@ function Home() {
   //     // .then((res) => (res ? fetchPost() : ""));
   // };
 
+console.log(postOn.path)
 
 
 
@@ -153,6 +155,11 @@ function Home() {
               })
             : "loading"}
         </div>
+        {/* <img alt="name" src={require('./images.jpg').default} width="200px" heigth="20px" /> */}
+
+
+
+        
       </div>
     </div>
   );

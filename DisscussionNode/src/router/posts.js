@@ -15,12 +15,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage }).single('avatar')
 
-// router.post('/', , function (req, res, next) {
-//   console.log(req.file)
-//   postData.create(req.body)
-// })
-
-
 router.post("/",upload, async (req, res) => {
 
 
@@ -48,6 +42,12 @@ router.post("/",upload, async (req, res) => {
   
 
   
+//   router.get("/images", async (req, res) => {
+// postData.find(req.body);
+//   });
+  
+
+
   router.delete("/:id", async (req, res) => {
   try {
     
