@@ -133,7 +133,10 @@ console.log(postOn.path)
 
                     </div>
                     Q. <b> {item.Question}</b>,<br />
-                    <i>{item.breifQuestion}</i>
+                    <i>{item.breifQuestion}</i><br/>
+                    {item.filePath}
+                    {/* <img alt="name" src={require{item.filePath}.default} width="200px" heigth="20px" /> */}
+                
                     <br />
                     <button
                       className="button"
@@ -159,7 +162,7 @@ console.log(postOn.path)
 
 
 
-        
+
       </div>
     </div>
   );
