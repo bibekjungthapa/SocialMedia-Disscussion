@@ -3,10 +3,11 @@ const app = express()
 const postData=require('../models/post');
 const router =express.Router()
 const multer  = require('multer')
-
+// import '../../../DisscussionReact/src/uploads/'
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    cb(null, '../DisscussionReact/src/uploads/')
+    // cb(null, 'uploads/')
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname)
@@ -19,12 +20,16 @@ router.post("/",upload, async (req, res) => {
 
 
     try {
-      console.log(req.file)
-      req.body.filePath=req.file.path
+
+      req.body.filePath=req.file.filename
+
+      console.log(req.body)
         postData.create(req.body);
         res.json({
           msg: "post created successfully",
         });
+
+
     
     } catch (error) {
     console.log(error)

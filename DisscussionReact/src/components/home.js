@@ -11,6 +11,7 @@ import Forum from "./forum";
 import Postpop from "./postpop";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
+// import '../uploads/'
 //  import images from './images.jpg'
 function Home() {
   const [addPostOn, setAddPostOn] = useState(false);
@@ -48,7 +49,7 @@ function Home() {
         addPostOn: item,
       }),
     };
-    console.log(item);
+    // console.log(item);
     fetch("http://localhost:8080/posts/" + item._id, requestOptions)
       .then((response) => response.json())
       .then((res) => (res ? fetchPost() : ""));
@@ -72,7 +73,7 @@ function Home() {
   //     // .then((res) => (res ? fetchPost() : ""));
   // };
 
-console.log(postOn.path)
+// console.log(postOn.path)s
 
 
 
@@ -111,8 +112,11 @@ console.log(postOn.path)
         <div className="Post">
           {postOn.length > 0
             ? postOn.map((item, index) => {
+          //  console.log(item.filePath)
+          //  const path= '../uploads/'+item.filePath
+// console.log(path)
                 return (
-                  <li>
+                  <li key={item._id}>
                     <div className="Style-icon">
                       <DeleteFilled
                         onClick={() => {
@@ -134,8 +138,8 @@ console.log(postOn.path)
                     </div>
                     Q. <b> {item.Question}</b>,<br />
                     <i>{item.breifQuestion}</i><br/>
-                    {item.filePath}
-                    {/* <img alt="name" src={require{item.filePath}.default} width="200px" heigth="20px" /> */}
+                    {/* <img src={item.filePath} height="200" width="200" alt="photo" /> */}
+                       <img alt="photo" src={require('../uploads/'+item.filePath).default} width="200px" heigth="20px" />
                 
                     <br />
                     <button

@@ -4,7 +4,8 @@ const mongoose=require('mongoose')
     {
       Question: { type: String, required: true },
       breifQuestion: { type: String, required: true },
-      filePath:{ type: String, required: true }
+      filePath:{ type: String, required: true },
+      
     },
     {
       collection: "post",
